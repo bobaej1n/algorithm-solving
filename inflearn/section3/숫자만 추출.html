@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(str) {
+      let answer = "";
+
+      // 방법 1 - 내가 푼 방법
+      for (let i of str) {
+        let num = i.charCodeAt();
+        if (num >= 48 && num <= 57) answer += i;
+      }
+      return parseInt(answer);
+
+      // 방법 2 - 강의 솔루션 1
+      // let answer = "";
+      // for (let i of str) {
+      //   if (!isNaN(i)) answer += i;
+      // }
+      // return parseInt(answer);
+
+      // 방법 3 - 강의 솔루션 2 (parseInt 사용 x)
+      // let answer = 0;
+      // for (let i of str) {
+      //   if (!isNaN(i)) answer += answer * 10 + Number(i);
+      // }
+      // return answer;
+    }
+
+    let str = "g0en2T0s8eSoft";
+    console.log(solution(str));
+  </script>
+</body>
+
+</html>
